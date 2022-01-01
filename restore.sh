@@ -1,6 +1,13 @@
-if ! rpm -qa | grep -qw glibc-static; then
-    yum install glibc-static
+if ! rpm -qa | grep epel-release; then
+    yum install epel-release
+    yum install xmlstarlet
 fi
+
+if ! rpm -qa | grep xmlstarlet; then
+
+    yum install xmlstarlet
+fi
+
 
 Taracilacakdosya=$1
 dizinadi=${Taracilacakdosya:0:20}
